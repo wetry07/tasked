@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tasked</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="header-content">
+                <h1 class="logo">tasked</h1>
+                <div class="header-controls">
+                    <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search tasks..." class="search-input">
+            </div>
+        </header>
+
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="What's on your mind?" autocomplete="off">
+            <div class="task-options">
+                <input type="date" id="dueDate" class="due-date-input">
+                <select id="priority" class="priority-select">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <input type="text" id="tags" placeholder="Tags (comma-separated)" class="tags-input">
+            </div>
+        </div>
+
+        <div class="filters-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="tasks-container">
+            <div id="tasksList" class="tasks-list"></div>
+        </div>
+
+        <button class="add-task-btn" id="addTaskBtn" title="Add new task">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+
+    <div class="notification" id="notification">
+        <span class="notification-message"></span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
